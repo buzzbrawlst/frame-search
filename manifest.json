@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Frame Search",
+  "version": "2.0.0",
+  "description": "Capture your screen or a selected region and search it directly with Google Lens.",
+  "permissions": ["activeTab", "tabs", "storage", "contextMenus", "scripting"],
+  "host_permissions": ["https://lens.google.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "Frame Search", "default_popup": "popup.html" },
+  "options_page": "options.html",
+  "commands": {
+    "search-frame": {
+      "suggested_key": { "default": "Ctrl+Shift+L", "mac": "Command+Shift+L" },
+      "description": "Capture the visible tab and search it with Google Lens"
+    },
+    "select-frame": {
+      "suggested_key": { "default": "Ctrl+Shift+K", "mac": "Command+Shift+K" },
+      "description": "Select a region and search it with Google Lens"
+    }
+  }
+}
